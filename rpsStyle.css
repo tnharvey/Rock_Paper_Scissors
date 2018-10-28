@@ -1,0 +1,370 @@
+html {
+  font-size: 10px;
+  background-color: black;
+  color: white;
+}
+
+body,html {
+  margin: 0;
+  padding: 1px;
+  font-family: sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #F1B702;
+}
+a:visited{
+	color: #727B68;
+}
+/*  transition: all .07s ease;   */
+
+/*  transform: scale(1.1);   */
+/*  box-shadow: 0 0 1rem #ffc600;   */
+
+.button {
+	border: 0px;
+	border-radius: 10px;
+	font-size: 3em;
+	background-color: #0013FF;
+	box-shadow: 0 0 0;
+	cursor: default;
+	padding: 10px;
+}
+
+.button:hover {
+	box-shadow: 0px 0px 6px;
+}
+.row {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+	padding: 0.05px;
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"] {
+    float: left;
+}
+#main {
+	padding-top: 0.05px;
+}
+.empty {
+	padding: 1px;
+	min-height: 15px;
+}
+.hidden{visibility: hidden;}
+
+/* Popup Containers */
+.popupContainer {
+	background-color: black;
+	border: solid #727b6a;
+	border-radius: 5px;
+	position: absolute;
+	margin: auto;
+	z-index: 1;
+	padding-bottom: 1.5em;
+}
+.popupHeader {
+	font-size: 3em;
+	font-weight: bolder;
+	padding-top: .7em;
+	padding-bottom: .5em;
+}
+
+
+/*columns definitions*/
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+/* Header row CSS */
+#topContainer {
+	padding: 0.05px;
+}
+#heading {
+	text-align: center;
+	font-size: 6em;
+	text-shadow: 1px 1px 15px #aaaa66;
+}
+
+/* Avatars row CSS */
+#avatarsContainer {
+}
+
+#avatarsContainer>div {
+	min-height: 120px;
+	position: relative;
+}
+
+#avatarsContainer>div>img{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.avatarImg {
+	height: 110px;
+}
+
+.player {
+	color: #01248B;
+	text-shadow: .2px .2px .5px #FFFFFF;
+}
+
+.computer {
+	color: #F18507;
+	text-shadow: .2px .2px .5px #FFFFFF;
+}
+
+#roundContainer {
+	padding: 0.05px;
+	font-size: 3em;
+	text-align: center;
+}
+
+#roundLabel {
+	margin-top: 1.5em;
+}
+
+#round {
+	font-weight: bold;
+	color: red;
+	text-shadow: .5px .5px 2px #FFFFFF;
+}
+
+.score {
+	display: block;
+	text-align: center;
+	width:100%;
+	font-size: 2em;
+	font-weight: bold;
+	padding-top: 10px;
+}
+
+/* RPS Choice Buttons */
+
+#choiceButtons {
+	padding: 3em;
+}
+
+#choiceButtons>div {
+	min-height: 120px;
+	position: relative;
+}
+
+.choiceButton {
+	width: 129px;
+	height: 127px;
+	margin: 10px;
+}
+.rock {
+	background: url("images/rps-icons/red/Rock-Icon.png") no-repeat;
+}
+
+.rock:hover {
+	background: url("images/rps-icons/red/Rock-Sign.png") no-repeat;
+}
+
+.computer.rock-choice {
+	background: url("images/rps-icons/orange/Rock-Icon.png") no-repeat;
+	background-position: center;
+	background-size: 75px 75px;
+}
+
+.player.rock-choice {
+	background: url("images/rps-icons/blue/Rock-Icon.png") no-repeat;
+	background-position: center;
+	background-size: 75px 75px;
+}
+
+.computer.paper-choice {
+	background: url("images/rps-icons/orange/Paper-Icon.png") no-repeat;
+	background-position: center;
+	background-size: 75px 75px;
+}
+
+.player.paper-choice {
+	background: url("images/rps-icons/blue/Paper-Icon.png") no-repeat;
+	background-position: center;
+	background-size: 75px 75px;
+}
+
+.computer.scissors-choice {
+	background: url("images/rps-icons/orange/Scissors-Icon.png") no-repeat;
+	background-position: center;
+	background-size: 75px 75px;
+}
+
+.player.scissors-choice {
+	background: url("images/rps-icons/blue/Scissors-Icon.png") no-repeat;
+	background-position: center;
+	background-size: 75px 75px;
+}
+
+.paper {
+	background: url("images/rps-icons/red/Paper-Icon.png") no-repeat;
+}
+
+.paper:hover {
+	background: url("images/rps-icons/red/Paper-Sign.png") no-repeat;
+}
+
+.scissors {
+	background: url("images/rps-icons/red/Scissors-Icon.png") no-repeat;
+}
+
+.scissors:hover {
+	background: url("images/rps-icons/red/Scissors-Sign.png") no-repeat;
+}
+
+.rock.disabled {
+	background: url("images/rps-icons/gray/Rock-Icon.png") no-repeat;
+}
+
+.paper.disabled {
+	background: url("images/rps-icons/gray/Paper-Icon.png") no-repeat;
+}
+
+.scissors.disabled {
+	background: url("images/rps-icons/gray/Scissors-Icon.png") no-repeat;
+}
+
+/* avatars */
+.avatar {
+	min-height: 120px;
+	position: relative;
+	width: 135px;
+	height: 135px;
+	margin: 10px;
+	border-radius: 5px;
+}
+
+#computerAvatar.happy {
+	background: url("images/computer-emojis/happy-emoji.png") no-repeat;
+	background-size: 135px 135px;
+}
+
+#computerAvatar.angry {
+	background: url("images/computer-emojis/angry-emoji.png") no-repeat;
+	background-size: 135px 135px;
+}
+
+#computerAvatar.annoyed {
+	background: url("images/computer-emojis/annoyed-emoji.png") no-repeat;
+	background-size: 135px 135px;
+}
+
+#computerAvatar.crying {
+	background: url("images/computer-emojis/crying-emoji.png") no-repeat;
+	background-size: 135px 135px;
+}
+
+#computerAvatar.laughing {
+	background: url("images/computer-emojis/laughing-emoji.png") no-repeat;
+	background-size: 135px 135px;
+}
+
+#computerAvatar.surprised {
+	background: url("images/computer-emojis/surprised-emoji.png") no-repeat;
+	background-size: 135px 135px;
+}
+
+#playerAvatar.pigeon {
+	background: url("images/player-avatars/Angry-Pigeon.jpg") no-repeat;
+	background-size: 135px 135px;
+}
+#playerAvatar.vanna {
+	background: url("images/player-avatars/Vanna.jpg") no-repeat;
+	background-size: 135px 135px;
+}
+
+#playerAvatar.angry {
+	background: url("images/player-avatars/man-angry.jpg") no-repeat;
+	background-size: 135px 135px;
+}
+
+#playerAvatar.awful {
+	background: url("images/player-avatars/woman-angry.jpg") no-repeat;
+	background-size: 135px 135px;
+}
+
+#playerAvatar.mona {
+	background: url("images/player-avatars/Mona-Lisa.jpg") no-repeat;
+	background-size: 135px 135px;
+}
+
+#playerAvatar.thinking {
+	background: url("images/player-avatars/Woman-Thinking-02.jpg") no-repeat;
+	background-size: 135px 135px;
+}
+
+#playerAvatar.child {
+	background: url("images/player-avatars/child-angry.png") no-repeat;
+	background-size: 135px 135px;
+}
+
+
+.roundWinner {
+	border-bottom:6px double #f1b702;
+}
+
+.matchWinner {
+	border:10px double #f1b702;
+}
+/* Footer Container */
+#footerContainer {
+	min-height: 20px;
+}
+
+#odinProject {
+	float:right;
+}
+
+/* Final State Container */
+
+#finalStateContainer {
+	width:45%;
+	top: 47%;
+	left: 0;
+	right: 0;
+}
+
+#restart {
+
+}
+
+/* Initial State Container */
+
+#initialStateContainer {
+	width:70%;
+	top: 30%;
+	left: 0;
+	right: 0;
+}
+.explanatory-text {
+	font-size: 1.3em;
+}
+
+#rpsDiagram {
+	background-color: white;
+	width: 70%;
+}
